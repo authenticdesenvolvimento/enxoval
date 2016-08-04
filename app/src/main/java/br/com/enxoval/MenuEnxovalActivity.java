@@ -70,7 +70,7 @@ public abstract class MenuEnxovalActivity extends ActionBarActivity{
 	private static TimerTask task;
 	private final Handler handler = new Handler();
 	private AdView mAdView;
-	private Tracker mTracker;
+
 
 	protected void onCreate(Bundle savedInstanceState, int view_id, int linear_layout_id) {
 		super.onCreate(savedInstanceState);
@@ -86,6 +86,7 @@ public abstract class MenuEnxovalActivity extends ActionBarActivity{
 	protected void onResume() {
 		super.onResume();
 		// Obtain the shared Tracker instance.
+		Tracker mTracker;
 		AnalyticsApplication application = (AnalyticsApplication) getApplication();
 		mTracker = application.getDefaultTracker();
 		mTracker.setScreenName(this.getClass().getName());

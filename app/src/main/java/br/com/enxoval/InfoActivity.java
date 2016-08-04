@@ -10,11 +10,20 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 public class InfoActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		// Obtain the shared Tracker instance.
+		Tracker mTracker;
+		AnalyticsApplication application = (AnalyticsApplication) getApplication();
+		mTracker = application.getDefaultTracker();
+		mTracker.setScreenName(this.getClass().getName());
+		mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 		setContentView(R.layout.activity_info);
 		Button comecar = (Button) findViewById(R.id.info_btn_comecar);
 		

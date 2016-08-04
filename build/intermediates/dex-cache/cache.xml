@@ -2,67 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\jars\classes.jar"
-        jumboMode="false"
+        jar="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
         revision="21.1.2"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
-        <dex dex="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\pre-dexed\debug\classes-21096b6042602547231ec5e2e53235473c7131e1.jar" />
-    </item>
-    <item
-        jar="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
-        <dex dex="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\pre-dexed\debug\classes-2e8d7c0315aaf3ec417712b0995757357bd7e6ce.jar" />
-    </item>
-    <item
-        jar="E:\Robinson\Android\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-1e98df8a3f729f822060d7033c70722c5d59ff71.jar" />
-    </item>
-    <item
-        jar="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-a9c2204df47cdbe96a214950e9e07affb7a32935.jar" />
-    </item>
-    <item
-        jar="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="997773777cf3904c11d6764fe3b7668538220e49">
-        <dex dex="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\pre-dexed\debug\classes-25756862e5623d557c1cd6d45a5f4fd373fdb4dd.jar" />
-    </item>
-    <item
-        jar="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\pre-dexed\debug\classes-670cf8844397cf70c79d446a9f979a1ebd45cf13.jar" />
-    </item>
-    <item
-        jar="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
-        <dex dex="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\pre-dexed\debug\classes-9e1ebd0ca3fd5857add00b7c70c479f706ca35f5.jar" />
-    </item>
-    <item
-        jar="E:\Robinson\Android\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval_dev\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-6c15280c72d7a2eb2a8173ffbf9b3aa7aec1ff14.jar" />
-    </item>
-    <item
-        jar="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval_dev\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
-        <dex dex="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval_dev\app\build\intermediates\pre-dexed\debug\classes-4756dd8034bae26514cd145273db6e3378e807d6.jar" />
+        sha1="b554de16ca53bd9e65181b17e6656d43b18ac320">
+        <dex dex="C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_d047e31a22e4e30becb688bfb6dbfb44220b7e2e.jar" />
     </item>
 
 </items>

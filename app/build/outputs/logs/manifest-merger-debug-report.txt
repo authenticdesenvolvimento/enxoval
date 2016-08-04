@@ -6,7 +6,7 @@ ADDED from C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version
 		INJECTED from C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\src\main\AndroidManifest.xml:5:5-30
+		ADDED from C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\src\main\AndroidManifest.xml:5:5-32
 		INJECTED from C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\robinson\Dropbox\AndroidstudioProjects\Enxoval 1.4 - version code 5 - db versin 3\app\src\main\AndroidManifest.xml
 	android:versionCode
