@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >    
+
+    <TextView 
+        android:id="@+id/list_view_sub_menu_textview1"
+       	style="@style/lst_view_padrao"
+    />
+    
+        <ListView
+	        android:id="@+id/list_view_sub_menu_list_view"
+	        android:layout_width="match_parent"
+	        android:layout_height="fill_parent"
+	        android:divider="#FFECECEC"
+	        android:layout_marginLeft="30dp"
+	        android:layout_marginRight="30dp"
+			android:background="#EEEEEE"
+	        android:dividerHeight="2sp" />        
+	
+</LinearLayout>
