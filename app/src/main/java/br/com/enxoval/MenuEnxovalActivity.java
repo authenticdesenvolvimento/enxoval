@@ -46,6 +46,8 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 import br.com.mvc.Metodos_auxiliares;
 
@@ -68,6 +70,7 @@ public abstract class MenuEnxovalActivity extends ActionBarActivity{
 	private static TimerTask task;
 	private final Handler handler = new Handler();
 	private AdView mAdView;
+	private Tracker mTracker;
 
 	protected void onCreate(Bundle savedInstanceState, int view_id, int linear_layout_id) {
 		super.onCreate(savedInstanceState);
@@ -82,6 +85,12 @@ public abstract class MenuEnxovalActivity extends ActionBarActivity{
 	@Override
 	protected void onResume() {
 		super.onResume();
+		// Obtain the shared Tracker instance.
+		AnalyticsApplication application = (AnalyticsApplication) getApplication();
+		mTracker = application.getDefaultTracker();
+		mTracker.setScreenName(this.getClass().getName());
+		mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+
 		// Resume the AdView.
 		if(mAdView != null)
 			mAdView.resume();
