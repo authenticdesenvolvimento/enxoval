@@ -1,9 +1,0 @@
-update subcategorias set suca_descricao = "Higiene" where suca_id = 4;
-update subcategorias set suca_descricao = "Higiene" where suca_id = 12;
-update produtos set prod_nome = replace(prod_nome, "cumprido", "comprido") where prod_id = 24;
-update produtos set prod_nome = replace(prod_nome, "cumprido", "comprido") where prod_id = 25;
-update produtos set prod_nome = replace(prod_nome, "cumprido", "comprido") where prod_id = 111;
-update produtos set prod_nome = replace(prod_nome, "cumprido", "comprido") where prod_id = 112;
-update produtos set prod_nome = replace(prod_nome, "higiêne", "higiene") where prod_id = 82;
-update produtos set prod_nome = replace(prod_nome, "Mosqueteiro", "Mosquiteiro") where prod_id = 77;
-update produtos set prod_nome = replace(prod_nome, "Mosqueteiro", "Mosquiteiro") where prod_id = 134;
