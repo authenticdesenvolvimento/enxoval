@@ -1,4 +1,5 @@
 package br.com.enxoval;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -10,6 +11,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 
 import android.util.Log;
@@ -19,7 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
+/*
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -27,13 +29,15 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.message.BasicNameValuePair;*/
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +55,7 @@ import com.google.android.gms.analytics.Tracker;
 
 import br.com.mvc.Metodos_auxiliares;
 
-public abstract class MenuEnxovalActivity extends ActionBarActivity{
+public abstract class MenuEnxovalActivity extends AppCompatActivity{
 	static String suca_id;
 	private static List<Bitmap> bmp = new ArrayList<Bitmap>();
 	private static List<String> links = new ArrayList<String>();
@@ -151,12 +155,21 @@ public abstract class MenuEnxovalActivity extends ActionBarActivity{
 
 		@Override
 		protected String doInBackground(String... params) {
-			HttpClient httpclient = new DefaultHttpClient();
+			URL url;
+			HttpURLConnection httpURLConnection = null;
+
+			//OutputStreamWriter outputStreamWriter = null;
+			//HttpClient httpclient = new DefaultHttpClient();
 			try {
-				HttpPost httppost = new HttpPost(params[0]);
-				HttpResponse response = httpclient.execute(httppost);
-				jsonResult = inputStreamToString(
-						response.getEntity().getContent()).toString();
+				url = new URL(params[0]);
+				httpURLConnection = (HttpURLConnection) url.openConnection();
+				int responseCode = httpURLConnection.getResponseCode();
+
+				//HttpPost httppost = new HttpPost(params[0]);
+				//HttpResponse response = httpclient.execute(httppost);
+				//jsonResult = inputStreamToString(
+				//		response.getEntity().getContent()).toString();
+				jsonResult = inputStreamToString(new InputStreamReader(httpURLConnection.getInputStream(),"utf-8")).toString();
 			}
 
 			catch (Exception e) {
@@ -165,10 +178,11 @@ public abstract class MenuEnxovalActivity extends ActionBarActivity{
 			return null;
 		}
 
-		private StringBuilder inputStreamToString(InputStream is) {
+		//private StringBuilder inputStreamToString(InputStream is) {
+		private StringBuilder inputStreamToString(InputStreamReader is) {
 			String rLine = "";
 			StringBuilder answer = new StringBuilder();
-			BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+			BufferedReader rd = new BufferedReader(is);
 
 			try {
 				while ((rLine = rd.readLine()) != null) {
@@ -471,16 +485,25 @@ public abstract class MenuEnxovalActivity extends ActionBarActivity{
 		new AsyncTask<Void, Void, Void>() {
 			@Override
 			protected Void doInBackground(Void... params) {
-				ArrayList<NameValuePair> nameValuePairs;
-				nameValuePairs = new ArrayList<NameValuePair>(2);
-				nameValuePairs.add(new BasicNameValuePair("id",id));
+				String values = "?id=" + id;
+
+				//ArrayList<NameValuePair> nameValuePairs;
+				//nameValuePairs = new ArrayList<NameValuePair>(2);
+				//nameValuePairs.add(new BasicNameValuePair("id",id));
+
+				URL url;
+				HttpURLConnection httpURLConnection = null;
 
 				try {
-					HttpClient httpclient = new DefaultHttpClient();
+
+					url = new URL(base_url + "db_conta_clique_ads.php");
+					httpURLConnection = (HttpURLConnection) url.openConnection();
+					httpURLConnection.getOutputStream().write(values.getBytes("UTF8"));
+					//HttpClient httpclient = new DefaultHttpClient();
 					//HttpPost httppost = new HttpPost("http://www.authenticdesenvolvimento.com.br/db_conta_clique.php");
-					HttpPost httppost = new HttpPost(base_url + "db_conta_clique_ads.php");
-					httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-					httpclient.execute(httppost);
+					//HttpPost httppost = new HttpPost(base_url + "db_conta_clique_ads.php");
+					//httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+					//httpclient.execute(httppost);
 				} catch (Exception e) {}
 				return null;
 			}
@@ -492,16 +515,24 @@ public abstract class MenuEnxovalActivity extends ActionBarActivity{
 		new AsyncTask<Void, Void, Void>() {
 			@Override
 			protected Void doInBackground(Void... params) {
-				ArrayList<NameValuePair> nameValuePairs;
-				nameValuePairs = new ArrayList<NameValuePair>(2);
-				nameValuePairs.add(new BasicNameValuePair("id",id));
+				String values = "?id=" + id;
+				//ContentValues values=new ContentValues();
+				//values.put("id",id);
+				//ArrayList<NameValuePair> nameValuePairs;
+				//nameValuePairs = new ArrayList<NameValuePair>(2);
+				//nameValuePairs.add(new BasicNameValuePair("id",id));
+				URL url;
+				HttpURLConnection httpURLConnection = null;
 
 				try {
-					HttpClient httpclient = new DefaultHttpClient();
+					url = new URL(base_url + "db_conta_clique_ads.php");
+					httpURLConnection = (HttpURLConnection) url.openConnection();
+					httpURLConnection.getOutputStream().write(values.getBytes("UTF8"));
+					//HttpClient httpclient = new DefaultHttpClient();
 					//HttpPost httppost = new HttpPost("http://www.authenticdesenvolvimento.com.br/db_conta_impressao.php");
-					HttpPost httppost = new HttpPost(base_url + "db_conta_impressao_ads.php");
-					httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-					httpclient.execute(httppost);
+					//HttpPost httppost = new HttpPost(base_url + "db_conta_impressao_ads.php");
+					//httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+					//httpclient.execute(httppost);
 				} catch (Exception e) {}
 				return null;
 			}

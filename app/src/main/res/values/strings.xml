@@ -45,16 +45,22 @@
        	\n\nLeva em consideração também o clima, sendo que, geralmente, no Brasil temos:
        	\n\nMeses frios: abril, maio, junho, julho, agosto e setembro. \n\nMeses quentes: janeiro, fevereiro, março, outubro, novembro e dezembro.
        	\n\nAdeque seu enxoval à sua realidade.
-     </string>        	
+     </string>
     <string name="info_btn_comecar">Começar</string>
     <string name="title_activity_info">InfoActivity</string>
     <string name="banner_ad_unit_id">ca-app-pub-8027025344367466/3021603033</string>
 
     <string-array name="menu_poup_up_editar_produto">
-        <item >Editar quantidade que já tenho</item>
-        <item >Editar dados do produto</item>
-        <item >Deletar produto</item>
+        <item>Editar quantidade que já tenho</item>
+        <item>Editar dados do produto</item>
+        <item>Deletar produto</item>
     </string-array>
     <string name="title_activity_editar_produtos">EditarProdutosActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_tab_activity">tab_activity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

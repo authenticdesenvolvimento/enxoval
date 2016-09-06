@@ -18,6 +18,7 @@ package br.com.enxoval;
 
 
         import android.app.Application;
+        import android.support.multidex.MultiDexApplication;
 
         import com.google.android.gms.analytics.GoogleAnalytics;
         import com.google.android.gms.analytics.Tracker;
@@ -26,7 +27,7 @@ package br.com.enxoval;
  * This is a subclass of {@link Application} used to provide shared objects for this app, such as
  * the {@link Tracker}.
  */
-public class AnalyticsApplication extends Application {
+public class AnalyticsApplication extends MultiDexApplication {
     private Tracker mTracker;
 
     /**

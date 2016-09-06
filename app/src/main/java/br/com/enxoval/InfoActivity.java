@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,7 +14,7 @@ import android.widget.Button;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
-public class InfoActivity extends ActionBarActivity {
+public class InfoActivity extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,8 @@ public class InfoActivity extends ActionBarActivity {
 		mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 		setContentView(R.layout.activity_info);
 		Button comecar = (Button) findViewById(R.id.info_btn_comecar);
-		
+		Button comecar_map = (Button) findViewById(R.id.info_btn_comecar_maps);
+
 		comecar.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -34,6 +36,15 @@ public class InfoActivity extends ActionBarActivity {
 				Intent it = new Intent(getApplicationContext(), MainActivity.class);				
 				startActivity(it);		
 				finish();
+			}
+		});
+
+		comecar_map.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent it = new Intent(getApplicationContext(), TabsActivity.class);
+				startActivity(it);
 			}
 		});
 	}
